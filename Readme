@@ -2,3 +2,25 @@
 The values I do have is 'Frodo', and 'Sauron', there is not two seperate values for the keys due to the hashmap only accepting one key for each value.
 1-2) What is the capacity of your hash table after you have hashed all the above items? Explain your answer.
 The capacity is at 24 because we went over the initial capacity of 8 and the hashmap resized by multipling that initial capacity by the size_ratio of 3.
+
+
+2.
+const WhatDoesThisDo = function(){
+    let str1 = 'Hello World.';  //setting new variables for 2 separate strings
+    let str2 = 'Hello World.';
+    let map1 = new HashMap();   //creating new hashmap
+    map1.set(str1,10);          //key and pair for each string
+    map1.set(str2,20);
+    let map2 = new HashMap();  //creating new hashmap
+    let str3 = str1;            //create new variables that will represent the same strings
+    let str4 = str2;
+    map2.set(str3,20);        //key and pair for the new strings
+    map2.set(str4,10);
+
+    console.log(map1.get(str1));
+    console.log(map2.get(str3));   
+}
+
+Both hashmaps have the same string 'hello world' which will be notice as 1 item in the hashmap per hashmap
+It prints differently each time. Because the key's are the same, the last value set will overwrite the first value.
+So hashmap 1 would pring 20 and hashmap 2 will print 10. 
