@@ -18,5 +18,7 @@ function main() {
   lotr.set("Ent", "Treebeard");
 
   console.log(lotr.length, lotr.get('Hobbit'), lotr.get('Maiar'), lotr._capacity)
+
+
 }
 main();
