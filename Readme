@@ -1,0 +1,4 @@
+1-1) What are the values of Maiar and Hobbit that you have? Is there a discrepancy? Explain your answer.
+The values I do have is 'Frodo', and 'Sauron', there is not two seperate values for the keys due to the hashmap only accepting one key for each value.
+1-2) What is the capacity of your hash table after you have hashed all the above items? Explain your answer.
+The capacity is at 24 because we went over the initial capacity of 8 and the hashmap resized by multipling that initial capacity by the size_ratio of 3.
