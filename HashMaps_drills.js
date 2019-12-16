@@ -26,16 +26,16 @@ function main() {
 //Drill 4
 
 function removeDuplicates(string) {
-    let hash = new HashMaps ();
+  let hash = new HashMaps ();
   let newStr = '';
-    for(let i = 0; i < string.length; i++) {
-      try {
-        hash.get(string[i]);
-      } catch (e) {
-        hash.set(string[i], string[i]);
-        newStr += string[i]
-      }
+  for(let i = 0; i < string.length; i++) {
+    try {
+      hash.get(string[i]);
+    } catch (e) {
+      hash.set(string[i], string[i]);
+      newStr += string[i]
     }
+  }
   return newStr;
 }
 //console.log(removeDuplicates('google all that you think can think of'));
@@ -45,22 +45,47 @@ function isPalindrome(string) {
   let hash = new HashMaps();
 
   for (let i = 0; i < string.length; i++)  {
-      hash.set(string[i],i);
+    hash.set(string[i],i);
   }
   let count = 0;
   for (let i = 0; i < string.length; i++)  {
-     if(hash.get(string[i])!==i) {
-       count--;
-     } else {
-       count++
-     }
+    if(hash.get(string[i])!==i) {
+      count--;
+    } else {
+      count++
+    }
   }
-   if(count > 1) {
-     return false;
-   }
+  if(count > 1) {
+    return false;
+  }
   return true
 }
 // console.log(isPalindrome('acecarr'));
 // console.log(isPalindrome('north'));
 // console.log(isPalindrome('tdad'));
 // console.log(isPalindrome('daeed'));
+
+//Drill 6
+let input = ['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race'];
+
+function anagrams(array) {
+  let arr1 = [];
+  let arr2 = [];
+  let arr3 = [];
+  let finalArr = [];
+  let count = 0;
+
+  for(let i = 0; i < array.length; i++) {
+    if(array[i].split('').sort().join('') === array[count].split('').sort().join('')) {
+      arr1.push(array[i]);
+    } else if (array[i].split('').sort().join('') === array[1].split('').sort().join('')) {
+      arr2.push(array[i]);
+    } else if(array[i].split('').sort().join('') === array[2].split('').sort().join('')) {
+      arr3.push(array[i]);
+    }
+  }
+  finalArr.push(arr1, arr2, arr3);
+  return finalArr;
+}
+  
+console.log(anagrams(input));
