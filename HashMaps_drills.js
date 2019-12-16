@@ -22,3 +22,15 @@ function main() {
 
 }
 main();
+
+//Drill 4
+
+function delete(string) {
+    let hash = new HashMaps ();
+    for(let i = 0; i < String.length; i++) {
+        hash.set(string.charCodeAt(i)
+
+
+    }
+
+}
